@@ -22,16 +22,16 @@ If not specified it will try to read `./config/local.json`
      - `checkInterval` (optional, default: 10s)
      - `tls` (optional, default: false)
 
-User auth is done against `admin` db
+User auth is done against `admin` db.
 
-Mongo built-in read-only role `clusterMonitor` or similar that allows `replSetGetStatus` query should be granted to the user
+Mongo built-in read-only role `clusterMonitor` or similar that allows `replSetGetStatus` query should be granted to the user.
 
 ## Example config file:
 
 ```json
-{   
-   "mongUsr":      "clusterMonitor",
-   "mongoPwd":     "pass",
+{
+   "mongUsr": "clusterMonitor",
+   "mongoPwd": "pass",
    "pagerdutyKey": "pagerduty_key",
    "slackWebhook": "https://webhook",
    "replicaSets":[
@@ -44,8 +44,8 @@ Mongo built-in read-only role `clusterMonitor` or similar that allows `replSetGe
         {
             "name": "production mongo config",
             "members": "mongoc,mongoc2,mongoc3",
-            "mongUsr":      "clusterMonitorConfig",
-            "mongoPwd":     "passConfig"
+            "mongUsr": "clusterMonitorConfig",
+            "mongoPwd": "passConfig"
         }
     ]
 }
